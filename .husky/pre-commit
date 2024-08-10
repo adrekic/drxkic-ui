@@ -3,8 +3,9 @@
 
 branch="$(git rev-parse --abbrev-ref HEAD)"
 
-if [ "$branch" = "master" ]; then
-  >&2 echo "WARNING! YOU ARE COMMITTING DIRECTLY TO MASTER!"
+if [ "$branch" = "main" ]; then
+  >&2 echo "ERROR! YOU ARE ATTEMPTING TO COMMIT DIRECTLY TO MAIN!"
+  exit 1
 fi
 
 type_error_msg="ES LINT ERRORS FOUND. Please fix them before committing. This may be because you installed a new version of a dependency including a breaking change."

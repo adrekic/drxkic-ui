@@ -12,12 +12,13 @@ const config: StorybookConfig = {
 	},
 	// optional
 	addons: [
-		"@storybook/addon-onboarding",
-		"@storybook/addon-links",
-		"@storybook/addon-essentials",
-		"@chromatic-com/storybook",
-		"@storybook/addon-interactions",
-	],
+        "@storybook/addon-onboarding",
+        "@storybook/addon-links",
+        "@storybook/addon-essentials",
+        "@chromatic-com/storybook",
+        "@storybook/addon-interactions",
+        "@storybook/addon-themes"
+    ],
 	docs: {
 		autodocs: "tag",
 	},

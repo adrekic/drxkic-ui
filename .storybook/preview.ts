@@ -1,6 +1,7 @@
 import type { Preview } from "@storybook/react"
 import { withThemeByDataAttribute } from "@storybook/addon-themes"
 import "../src/index.css"
+import "./preview.css"
 
 // global CSS imports go here
 
@@ -18,7 +19,7 @@ const preview: Preview = {
 		withThemeByDataAttribute({
 			themes: {
 				// nameOfTheme: 'dataAttributeForTheme',
-				light: "",
+				light: "light",
 				dark: "dark",
 			},
 			defaultTheme: "light",

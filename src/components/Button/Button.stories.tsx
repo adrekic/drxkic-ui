@@ -11,7 +11,7 @@ const meta: Meta<typeof Button> = {
 export default meta
 type Story = StoryObj<typeof Button>
 
-const sizes = ["xs", "sm", "md", "lg"] as const
+const sizes = ["xs", "sm", "md", "lg", "xl"] as const
 const variants = ["solid", "soft", "outline", "surface", "ghost"] as const
 
 export const Basic: Story = {
@@ -27,6 +27,7 @@ export const Basic: Story = {
 								key={variant}
 								size={size}
 								{...args}
+								color="red"
 							>
 								{children}
 							</Button>

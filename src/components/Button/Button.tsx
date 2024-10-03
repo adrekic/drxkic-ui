@@ -2,12 +2,15 @@ import React, { memo, forwardRef, ComponentProps } from "react"
 import { cx } from "class-variance-authority"
 import { button, interactive } from "./utils"
 import { ButtonVariants, InteractiveVariants } from "./typings"
-import { useButtons } from "../Buttons/hooks"
+import { useButtons } from "../Buttons"
+import { Colors } from "../../../drxkicui.config.ts"
 
 export interface ButtonProps
 	extends ButtonVariants,
 		InteractiveVariants,
-		ComponentProps<"button"> {}
+		ComponentProps<"button"> {
+	color: keyof typeof Colors
+}
 
 export const Button = memo(
 	forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
@@ -18,6 +21,7 @@ export const Button = memo(
 			icon = buttonsContext.icon,
 			variant = buttonsContext.variant,
 			size = buttonsContext.size,
+			color,
 			...rest
 		} = props
 		return (
@@ -25,9 +29,10 @@ export const Button = memo(
 				className={cx(
 					className,
 					button({ size, icon }),
-					interactive({ variant, selected: false }),
+					interactive({ variant }),
 				)}
 				ref={ref}
+				data-accent-color={color}
 				{...rest}
 			>
 				{children}

@@ -27,7 +27,7 @@ export const Basic: Story = {
 								key={variant}
 								size={size}
 								{...args}
-								color="red"
+								color="overmap"
 							>
 								{children}
 							</Button>

@@ -7,13 +7,13 @@ export const Colors: Record<string, string> = {
 	orange: "#f5b041",
 	blue: "#2D55E2",
 	lightGreen: "#82e0aa",
-	black: "#000000",
-	white: "#FFFFFF",
+	gray: "#9E9E9E",
+	overmap: "#282F28",
 }
 
 export default {
 	colors: Colors,
-	base: "#000000",
+	base: "#060909",
 	lightBackground: "#FFFFFF",
-	darkBackground: "#111111",
+	darkBackground: "#0D0D0D",
 }

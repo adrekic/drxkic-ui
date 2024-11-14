@@ -51,6 +51,7 @@
   "dependencies": {
     "@eslint/eslintrc": "^3.1.0",
     "@radix-ui/colors": "^3.0.0",
+    "@radix-ui/react-popover": "^1.1.2",
     "bezier-easing": "^2.1.0",
     "class-variance-authority": "^0.7.0",
     "colorjs.io": "^0.5.2",

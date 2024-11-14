@@ -3,7 +3,7 @@ import plugin from "tailwindcss/plugin"
 import drxkicuiConfig from "./drxkicui.config"
 import { generateCssColorVars } from "./src/utils/generateCssColorVars"
 import { generateRadixColors } from "./src/utils/generateRadixColors"
-import { generateCssVarMapping } from "./src/utils/generateAccentCssVarMapping.ts"
+import { generateCssVarMapping } from "./src/utils/generateAccentCssVarMapping"
 
 const { base, lightBackground, darkBackground, colors } = drxkicuiConfig
 
@@ -122,6 +122,40 @@ export default {
 		extend: {
 			spacing: {
 				"0.25": "0.0625rem",
+			},
+			boxShadow: {
+				"light-1": `inset 0 1.5px 2px 0 var(--black-a2), 
+							inset 0 1.5px 2px 0 var(--black-a2)`,
+				"light-2": `0 0 0 0.5px var(--black-a1), 
+							0 1px 1px 0 var(--black-a2), 
+							0 2px 1px -1px var(--black-a1), 
+							0 1px 3px 0 var(--black-a1)`,
+				"light-3": `0 2px 3px -2px var(--black-a3), 
+							0 3px 12px -4px var(--black-a2), 
+							0 4px 16px -8px var(--black-a2)`,
+				"light-4": `0 8px 40px var(--black-a1), 
+							0 12px 32px -16px var(--black-a3)`,
+				"light-5": `0 12px 60px var(--black-a3), 
+							0 12px 32px -16px var(--black-a5)`,
+
+				"dark-1": `inset 0 -1px 1px 0 var(--black-a3), 
+						   inset 0 0 0 1px var(--black-a3), 
+						   inset 0 3px 4px 0 var(--black-a5)`,
+				"dark-2": ` 
+					  0 0 0 0.5px var(--black-a3),
+					  0 1px 1px 0 var(--black-a6), 
+					  0 2px 1px -1px var(--black-a6), 
+					  0 1px 3px 0 var(--black-a5)`,
+				"dark-3": `
+					  	   0 2px 3px -2px var(--black-a3),
+					  	   0 4px 8px -2px var(--black-a5), 
+					  	   0 4px 12px -4px var(--black-a7)`,
+				"dark-4": `
+						   0 8px 40px var(--black-a5),
+						   0 8px 24px -12px var(--black-a7)`,
+				"dark-5": `
+					  0 12px 60px var(--black-a5),
+					  0 12px 32px -16px var(--black-a7)`,
 			},
 		},
 	},

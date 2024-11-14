@@ -1,3 +1,6 @@
+@import "@radix-ui/colors/white-alpha.css";
+@import "@radix-ui/colors/black-alpha.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -99,7 +99,7 @@ export const button = cva(["flex", "items-center", "gap-1", "rounded"], {
 		{
 			icon: false,
 			size: "xs",
-			class: "px-1",
+			class: "px-2",
 		},
 		{
 			icon: false,
